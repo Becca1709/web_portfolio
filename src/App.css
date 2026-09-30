@@ -1,0 +1,52 @@
+/*introduction*/
+nav{
+  background-color: #f4f4f4;
+}
+.introduction{
+  height:80vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+.I-am{
+  align-content: center;
+    font-size:x-large ;
+    max-width:50%;
+}
+.I-am ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.I-am img{
+  width:200px;
+}
+.intro-img{
+  max-width: 50%;
+}
+.description{
+  max-width:600px;
+  text-align: balance;
+}
+/*project section*/
+.project-cont{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.info {
+background-color: whitesmoke;
+width: min-content;
+padding: 1em;
+border-radius: 16px;
+height: fit-content;
+justify-self: center;
+}
+.mockups {
+  justify-self: center;
+  width:90%;
+  border-radius: 16px;
+  justify-self: center;
+}
