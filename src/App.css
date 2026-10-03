@@ -3,50 +3,86 @@ nav{
   background-color: #f4f4f4;
 }
 .introduction{
-  height:80vh;
-  text-align: center;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-evenly;
-}
-.I-am{
-  align-content: center;
-    font-size:x-large ;
-    max-width:50%;
-}
-.I-am ul{
+  align-items: center;
+  justify-content: center;  
+  gap:0;
   display: flex;
   flex-direction: row;
-  list-style: none;
-}
-.I-am img{
-  width:200px;
+  flex-wrap:wrap;
+  margin:2em;
+  min-height:80vh;
+
 }
 .intro-img{
-  max-width: 50%;
+   flex: 0 1 auto; 
 }
 .description{
   max-width:600px;
-  text-align: balance;
+  text-align: center;
+   justify-content: center;
+  align-items: center;
+  justify-items: center;
+    font-size:x-large ;
+  flex: 0 1 auto; 
 }
+.description ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding-left: 0; 
+  width: 100%;              
+}
+.description img{
+  width:150px;  
+}
+.description #boots{
+height: 70px;
+width: 80px;
+
+}
+.description #mysql{
+  height: 80px;
+  width:90px;
+}
+
+
 /*project section*/
+
 .project-cont{
   display:flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 32px;
 }
-.info {
-background-color: whitesmoke;
-width: min-content;
+
+.mockups {
+  justify-self: center;
+  border-radius: 16px;
+  justify-self: center;
+  background-color: whitesmoke;
+min-width: min-content;
+max-width:40%;
+margin:1em;
 padding: 1em;
 border-radius: 16px;
 height: fit-content;
-justify-self: center;
+flex: 2;
+
 }
-.mockups {
-  justify-self: center;
-  width:90%;
-  border-radius: 16px;
-  justify-self: center;
+.video{
+  flex: 1 1 350px; 
+ text-align: center;
+}
+
+@media (max-width: 980px) {
+  .introduction, {
+    display:flex;
+     /* Aligns items side-by-side on larger screens */
+  }
 }
