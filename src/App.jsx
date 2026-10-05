@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {useRef} from "react"
 import { BarNav } from '../components/navbar';
 import { Animated } from '../components/animated';
 import { motion } from "motion/react";
@@ -9,6 +10,7 @@ import coffeepreview from "../src/img/office_coffee.mov"
 import Logos from "../src/img/logos.png"
 import preview from "../src/img/holidayreviewshot.mp4"
 import holidaylogo from "../src/img/Logo5.png"
+import laneway from "../src/img/laneway_logo.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -16,10 +18,22 @@ import './App.css'
 
 
 function App(params) {
+   const projectRef = useRef(null);
+    const contactRef = useRef(null);
+    const scrollDown = (element) => {
+    // 2. Verifica que la referencia exista y ejecuta el scroll
+    if (element.current) {
+      element.current.scrollIntoView({ 
+        behavior: 'smooth', // Animación suave ('smooth') o instantánea ('instant')
+        block: 'start'      // Alinea el elemento al inicio ('start'), centro ('center') o final ('end')
+      });
+    }
+  }
+
  
   return (
     <>
-      <BarNav/>
+      <BarNav Projectscroll={() => scrollDown(projectRef)} Contactscroll={() => scrollDown(contactRef)}/>
       <main>
         <div className='introduction'>
           <div className='intro-img'>
@@ -46,14 +60,23 @@ function App(params) {
         
     </div>
     <div className='education'> 
+      <h1 id="section-name">E D U C A T I O N</h1>
+      <div className='edu-cont'>
+      <img src={laneway} width="200px"/>
+       <h3>Laneway Education</h3>
+      <h4>Diploma of Information Technology Front End and Back End Web Development</h4>
+      <h5>JAN 2024 - JAN 2026</h5>
+
+      </div>
     </div>
-    <div className='projects'>
+    <div className='projects' ref={projectRef}>
         <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 2.5 }}
       >
+        <h1 id="section-name">P R O J E C T S </h1>
          <Project_Card projectlogo={coffee}
 problems= "A coffee morning rush at the office cafe can hold employees waiting in line or not getting their morning coffee at all." 
 solutions="Making coffee ordering easier in the corporate world by creating a user friendly coffee ordering system that remembers your favorite coffee order but also allows you to change your order at anytime." 
@@ -73,7 +96,13 @@ videosrc={preview}/>
 </motion.div>
     </div>
     
- <div className='contact'>
+ <div className='contact' ref={contactRef}>
+<h1 id="section-name">C O N T A C T </h1>
+      <div className='contact-cont'>
+       <h3>Email me </h3>
+      <h4>rojasbecca27@gmail.com</h4>
+      <h5>add social media icons!</h5>
+      </div>
 
     </div>
       </main>

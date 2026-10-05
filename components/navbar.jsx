@@ -2,7 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-export function BarNav(){
+
+export function BarNav({Projectscroll, Contactscroll}){
     return(
         <div>
             <Navbar bg="light" data-bs-theme="light">
@@ -16,8 +17,8 @@ export function BarNav(){
             />
           </Navbar.Brand>
           <Nav className="justify-content-end">
-            <Nav.Link href="#home">Projects</Nav.Link>
-            <Nav.Link href="#features">Contact me</Nav.Link> 
+            <button type="button" onClick={Projectscroll}>Projects</button>
+            <button type="button" onClick={Contactscroll}>Contact me</button> 
             <Nav.Link href="https://github.com/becca1709" target='_blank' >GitHub</Nav.Link> 
             <Nav.Link href="https://www.linkedin.com/in/rebeccarojas/" target='_blank'> LinkedIn </Nav.Link>
 
