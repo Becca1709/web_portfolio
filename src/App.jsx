@@ -8,6 +8,11 @@ import coffee from "../src/img/Office_Coffee_NEW.png"
 import logoproject2 from "../src/img/logoproject2.png"
 import coffeepreview from "../src/img/office_coffee.mov"
 import Logos from "../src/img/holiday_mirage.png"
+import reactlogo from "../src/img/5.png"
+import bootstraplogo from "../src/img/react_boots.png"
+import csslogo from "../src/img/4.png"
+import mysqllogo from "../src/img/mysql.png"
+import introimg from "../src/img/DEV.png"
 import preview from "../src/img/holidayreviewshot.mp4"
 import holidaylogo from "../src/img/Logo5.png"
 import laneway from "../src/img/laneway_logo.png"
@@ -43,7 +48,7 @@ function App(params) {
       <main>
         <div className='introduction'>
           <div className='intro-img'>
-          <img src="../src/img/DEV.png" width="450px"/>
+          <img src={introimg} width="450px"/>
 
         </div>
         
@@ -56,10 +61,10 @@ function App(params) {
         
         <h3>Some of the tools I am familiar with</h3>
         <ul>
-          <li><img src="../src/img/5.png" alt="react logo"/></li>
-          <li><img src="../src/img/react_boots.png" alt="react_bootstrap_logo" id="boots"/></li>
-           <li><img src="../src/img/4.png" alt="css logo"/></li>
-            <li><img src="../src/img/mysql.png" alt="mysql_logo" id="mysql"/></li>
+          <li><img src={reactlogo} alt="react logo"/></li>
+          <li><img src={bootstraplogo} alt="react_bootstrap_logo" id="boots"/></li>
+           <li><img src={csslogo} alt="css logo"/></li>
+            <li><img src={mysqllogo} alt="mysql_logo" id="mysql"/></li>
         </ul>
     
         </div>

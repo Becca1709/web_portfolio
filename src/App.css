@@ -134,9 +134,8 @@ flex: 2;
 }
 
 @media (max-width: 980px) {
-  .introduction, {
+  .introduction {
     display:flex;
-     /* Aligns items side-by-side on larger screens */
   }
   .edu-cont,.description{
   
