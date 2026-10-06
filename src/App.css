@@ -1,6 +1,14 @@
+@font-face {
+  font-family: myFont; /* set name */
+  src: url(../src/fonts/Starlight\ Romance.ttf); /* url of the font */
+  
+}
 /*introduction*/
-nav{
-  background-color: #f4f4f4;
+nav h1{
+  font-family: myFont;
+  color: rgb(87, 125, 186);
+
+
 }
 nav button{
   background-color: rgba(245, 245, 245, 0);
@@ -9,6 +17,7 @@ nav button{
 nav link{
   font-weight: 400;
 }
+
 .introduction{
   align-items: center;
   justify-content: center;  
@@ -58,7 +67,8 @@ width: 80px;
 
 /*education section*/
 .edu-cont{
-   background-color: whitesmoke;
+   border-top: solid grey;
+   border-bottom: solid grey;
    width: 50%;
    justify-self: center;
    border-radius: 16px;
@@ -111,8 +121,10 @@ flex: 2;
 }
 .contact-cont{
   width: 90%;
-  background-color: rgb(12, 12, 72);
-  color:white;
+    border-top: solid grey;
+   border-bottom: solid grey;
+   text-align: center;
+   font-size: x-large;
   font-weight: 500;
   padding: 2em;
   justify-self: center;

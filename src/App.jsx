@@ -4,17 +4,23 @@ import { BarNav } from '../components/navbar';
 import { Animated } from '../components/animated';
 import { motion } from "motion/react";
 import { Project_Card } from '../components/project_Card';
-import coffee from "../src/img/Office_Coffee.png"
+import coffee from "../src/img/Office_Coffee_NEW.png"
 import logoproject2 from "../src/img/logoproject2.png"
 import coffeepreview from "../src/img/office_coffee.mov"
-import Logos from "../src/img/logos.png"
+import Logos from "../src/img/holiday_mirage.png"
 import preview from "../src/img/holidayreviewshot.mp4"
 import holidaylogo from "../src/img/Logo5.png"
 import laneway from "../src/img/laneway_logo.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';  
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import './App.css'
+
 
 
 function App(params) {
@@ -62,7 +68,7 @@ function App(params) {
     <div className='education'> 
       <h1 id="section-name">E D U C A T I O N</h1>
       <div className='edu-cont'>
-      <img src={laneway} width="200px"/>
+      <img src={laneway} width="100px"/>
        <h3>Laneway Education</h3>
       <h4>Diploma of Information Technology Front End and Back End Web Development</h4>
       <h5>JAN 2024 - JAN 2026</h5>
@@ -99,9 +105,11 @@ videosrc={preview}/>
  <div className='contact' ref={contactRef}>
 <h1 id="section-name">C O N T A C T </h1>
       <div className='contact-cont'>
-       <h3>Email me </h3>
-      <h4>rojasbecca27@gmail.com</h4>
-      <h5>add social media icons!</h5>
+      
+      <h4> <FontAwesomeIcon icon={faEnvelope} size="xl" style={{color: "rgb(87, 125, 186)",}}/>  rojasbecca27@gmail.com</h4>
+ <a href="https://www.linkedin.com/in/rebeccarojas/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} size="xl"style={{color: "rgb(87, 125, 186)",}} />LinkedIn</a>
+ 
+        <a href="https://github.com/becca1709" target="_blank"> <FontAwesomeIcon icon={faGithub} size="xl" style={{color: "rgb(87, 125, 186)",}} /> GitHub</a>
       </div>
 
     </div>
