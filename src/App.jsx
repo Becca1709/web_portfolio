@@ -25,6 +25,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import './App.css'
+import { Container, Col, Row } from 'react-bootstrap';
 
 
 
@@ -92,10 +93,10 @@ function App(params) {
 problems= "A coffee morning rush at the office cafe can hold employees waiting in line or not getting their morning coffee at all." 
 solutions="Making coffee ordering easier in the corporate world by creating a user friendly coffee ordering system that remembers your favorite coffee order but also allows you to change your order at anytime." 
 img_id="tools" img_src={logoproject2} 
-videosrc={coffeepreview}/>
+videosrc={coffeepreview} repo={"https://github.com/Becca1709/Coffee_app"}/>
     <Project_Card projectlogo={holidaylogo}
 problems= " Due to increasing concerns about our digital safety, sharing
-                  our memories doesn't feel like a decision to make lightly
+                  our memories it's not a decision to make lightly
                   anymore. Our memories can easily be lost in the endless storage of the
                   cloud." 
 solutions=" Creating a digital album to keep our private memories
@@ -103,10 +104,47 @@ solutions=" Creating a digital album to keep our private memories
                   A modern solution for the digital nomad that values online
                   safety while cherishing their best memories." 
 img_id="tools" img_src={Logos} 
-videosrc={preview}/>
+videosrc={preview} repo={"https://github.com/Becca1709/holiday_review_v1.4"}/>
 </motion.div>
     </div>
-    
+    <div className='Process'> 
+<h1 id="section-name">P R O C E S S</h1>
+  <div className='pro-description'>
+  <div className="ai-cont">
+    <h3>AI-Assisted Development</h3>
+     <p>I lead the complete design of the core architecture, visual design, and component development across projects, strategically leveraging AI tools to accelerate problem-solving.</p>
+  <p>Utilized AI as a real-time partner for debugging complex technical issues, validating syntax, and deepening comprehension of new concepts—allowing for faster iteration while maintaining complete ownership of the codebase.</p>
+  <h3>AI-Integration</h3>
+  <p>Actively expanding expertise in embedding AI capabilities directly into web applications—focusing on API integrations (e.g., OpenAI, Anthropic), prompt orchestration, and intelligent feature implementation through hands-on project builds.</p>
+  </div>
+        
+  <div className='steps-cont'>
+        <h3>Step by step</h3>
+<div class="process-card">
+   <span class="step-number">01</span>
+      <h3>Plan & Architect</h3>
+      <p>Mapping user journeys, designing database schemas, and defining component hierarchies before writing code.</p>
+    </div>
+    <div class="process-card">
+      <span class="step-number">02</span>
+      <h3>Build & Integrate</h3>
+      <p>Developing modular UI components and connecting front-end interfaces to back-end services with REST APIs.</p>
+    </div>
+    <div class="process-card">
+      <span class="step-number">03</span>
+      <h3>Debug & Optimize</h3>
+      <p>Leveraging AI tools as a real-time partner for rapid troubleshooting, syntax validation, and performance tuning.</p>
+    </div>
+    <div class="process-card">
+      <span class="step-number">04</span>
+      <h3>Deploy & Reflect</h3>
+      <p>Shipping to cloud hosting platforms, conducting integration testing, and capturing key lessons for continuous growth.</p>
+    </div>
+      </div>
+    </div>
+
+  
+    </div>
  <div className='contact' ref={contactRef}>
 <h1 id="section-name">C O N T A C T </h1>
       <div className='contact-cont'>

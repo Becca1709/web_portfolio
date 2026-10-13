@@ -1,4 +1,5 @@
 import react, { Children } from "react"
+import { Button } from "react-bootstrap"
 
 export function Project_Card(props){
     return(
@@ -30,6 +31,9 @@ export function Project_Card(props){
             >
               Your browser does not support the video tag.
             </video>
+            <div className="more">
+              <Button variant="secondary" href={props.repo} target="_blank">Repository</Button>
+            </div>
           </div>
         </div>
         </div>
