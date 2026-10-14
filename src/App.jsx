@@ -20,12 +20,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';  
+import { Video_Card } from '../components/video';
+import Tabs_ from '../components/tabs';
+import Readmd from '../components/RMtab'
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import './App.css'
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row, Button} from 'react-bootstrap';
+import { width } from '@fortawesome/free-brands-svg-icons/fa11ty';
 
 
 
@@ -41,8 +46,25 @@ function App(params) {
       });
     }
   }
-
+const tabData1 = [
+  { eventKey: 'home', title: 'Overview', content: <Project_Card projectlogo={coffee} style="200px"
+problems= "A coffee morning rush at the office cafe can hold employees waiting in line or not getting their morning coffee at all." 
+solutions="Making coffee ordering easier in the corporate world by creating a user friendly coffee ordering system that remembers your favorite coffee order but also allows you to change your order at anytime." 
+img_id="tools" img_src={logoproject2} 
+ repo={"https://github.com/Becca1709/Coffee_app"}/> },
+  { eventKey: 'profile', title: 'Video', content: <Video_Card videosrc={coffeepreview}/> },
+  /*{ eventKey: 'contact', title: 'READme', disabled: true, content: <ReadmeContent /> },*/
+];
  
+const tabData2=[ { eventKey: 'home', title: 'Overview', content: <Project_Card projectlogo={holidaylogo} style="280px"
+problems= " Due to increasing concerns about our digital safety, sharing our memories it's not a decision to make lightly
+                  anymore. Our memories can easily be lost in the endless storage of the cloud." 
+solutions=" Creating a digital album to keep our private memories organized without the risks of sharing them publicly.
+                  A modern solution for the digital nomad that values online safety while cherishing their best memories." 
+img_id="tools" img_src={Logos} repo={"https://github.com/Becca1709/holiday_review_v1.4"}/> },
+  { eventKey: 'profile', title: 'Video', content: <Video_Card videosrc={preview}/> },
+  { eventKey: 'ReadMe', title: 'ReadMe', content: <Readmd/> }
+]
   return (
     <>
       <BarNav Projectscroll={() => scrollDown(projectRef)} Contactscroll={() => scrollDown(contactRef)}/>
@@ -89,22 +111,20 @@ function App(params) {
         transition={{ duration: 2.5 }}
       >
         <h1 id="section-name">P R O J E C T S </h1>
-         <Project_Card projectlogo={coffee}
-problems= "A coffee morning rush at the office cafe can hold employees waiting in line or not getting their morning coffee at all." 
-solutions="Making coffee ordering easier in the corporate world by creating a user friendly coffee ordering system that remembers your favorite coffee order but also allows you to change your order at anytime." 
-img_id="tools" img_src={logoproject2} 
-videosrc={coffeepreview} repo={"https://github.com/Becca1709/Coffee_app"}/>
-    <Project_Card projectlogo={holidaylogo}
-problems= " Due to increasing concerns about our digital safety, sharing
-                  our memories it's not a decision to make lightly
-                  anymore. Our memories can easily be lost in the endless storage of the
-                  cloud." 
-solutions=" Creating a digital album to keep our private memories
-                  organized without the risks of sharing them publicly.
-                  A modern solution for the digital nomad that values online
-                  safety while cherishing their best memories." 
-img_id="tools" img_src={Logos} 
-videosrc={preview} repo={"https://github.com/Becca1709/holiday_review_v1.4"}/>
+<Container>
+  <Row>
+    <Col>
+<div className='project-cont'>
+<Tabs_ tabs={tabData1}/>
+</div>
+</Col>
+<Col>
+<div className='project-cont'>
+<Tabs_ tabs={tabData2}/>
+</div>
+</Col>
+</Row>
+</Container>
 </motion.div>
     </div>
     <div className='Process'> 
