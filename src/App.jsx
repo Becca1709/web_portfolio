@@ -53,8 +53,9 @@ solutions="Making coffee ordering easier in the corporate world by creating a us
 img_id="tools" img_src={logoproject2} 
  repo={"https://github.com/Becca1709/Coffee_app"}/> },
   { eventKey: 'profile', title: 'Video', content: <Video_Card videosrc={coffeepreview}/> },
-  /*{ eventKey: 'contact', title: 'READme', disabled: true, content: <ReadmeContent /> },*/
+  { eventKey: 'contact', title: 'READme', disabled: true, content: <Readmd /> },
 ];
+
  
 const tabData2=[ { eventKey: 'home', title: 'Overview', content: <Project_Card projectlogo={holidaylogo} style="280px"
 problems= " Due to increasing concerns about our digital safety, sharing our memories it's not a decision to make lightly
