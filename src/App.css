@@ -56,9 +56,8 @@ nav link{
   width:150px;  
 }
 .description #boots{
-height: 70px;
-width: 80px;
-
+height: 65px;
+width: 70px;
 }
 .description #mysql{
   height: 80px;
@@ -88,7 +87,6 @@ width: 80px;
   flex-direction: row;
   justify-items: center;
   justify-self: center;
-  /*border: solid pink;*/
 }
 .project-cont{
   justify-content: space-around;
@@ -96,10 +94,10 @@ width: 80px;
   align-content: center;
   margin-bottom: 32px;
   justify-self: center;
- /* border:solid black;*/
   max-width:fit-content;
   background-color: whitesmoke;
   border-radius: 16px ;
+  min-width: 350px;
 }
 
 .mockups {
@@ -109,17 +107,19 @@ width: 80px;
 min-width: min-content;
 margin:1em;
 padding: 1em;
-height: 500px;
+min-height: fit-content;
 flex: 2;
 }
-/*
-.mockups .left{
- display: grid;
-  grid-template-columns: repeat(1, 3fr); 
-  align-content: space-between;          
-  height: 400px;
+.readmecss{
+    min-height: fit-content;
+  justify-self: center;
+  justify-self: center;
+min-width: min-content;
+margin:1em;
+padding: 1em;
+height: 500px;
 }
-*/
+
 #tools{
   background-color: white;
   width: 100%;
@@ -170,13 +170,14 @@ flex: 2;
   .introduction {
     display:flex;
   }
+  .intro-img img{
+    width:300px;
+  }
   .description{
     width:90%;
   }
   .edu-cont,.description{
-  
    width: 90%;
-
 }
 .project-cont{
   display: flex;
@@ -186,11 +187,20 @@ flex: 2;
   display: flex;
   flex-direction: column-reverse;
 }
-/*.mockups .left{
-  display: flex;
-  direction: row;
-   align-items: flex-start;
-   align-content: center;
-   flex-wrap: wrap;
-}*/
+.intro-logos{
+  width: 50%;
+}
+.intro-logos img{
+  width: 100%;
+}
+
+.pro-description{
+display: flex;
+flex-direction: column;
+width:90%;
+}
+.ai-cont,.steps-cont{
+width:100%;
+}
+
 }

@@ -1,9 +1,15 @@
 import { useState } from 'react'
 import {useRef} from "react"
+//components
 import { BarNav } from '../components/navbar';
 import { Animated } from '../components/animated';
 import { motion } from "motion/react";
 import { Project_Card } from '../components/project_Card';
+import {Tabs_ } from '../components/tabs';
+import {Readmd} from '../components/RMtab';
+import { Project_Section } from '../components/project_section';
+import { Video_Card } from '../components/video';
+//resources
 import coffee from "../src/img/Office_Coffee_NEW.png"
 import logoproject2 from "../src/img/logoproject2.png"
 import coffeepreview from "../src/img/office_coffee.mov"
@@ -16,13 +22,15 @@ import introimg from "../src/img/DEV.png"
 import preview from "../src/img/holidayreviewshot.mp4"
 import holidaylogo from "../src/img/Logo5.png"
 import laneway from "../src/img/laneway_logo.png"
+
+
+//icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';  
-import { Video_Card } from '../components/video';
-import Tabs_ from '../components/tabs';
-import Readmd from '../components/RMtab'
+
+
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -32,7 +40,21 @@ import './App.css'
 import { Container, Col, Row, Button} from 'react-bootstrap';
 import { width } from '@fortawesome/free-brands-svg-icons/fa11ty';
 
-
+/*        <h1>OLD </h1>
+<Container>
+  <Row>
+    <Col>
+<div className='project-cont'>
+<Tabs_ tabs={tabData1}/>
+</div>
+</Col>
+<Col>
+<div className='project-cont'>
+<Tabs_ tabs={tabData2}/>
+</div>
+</Col>
+</Row>
+</Container>*/
 
 function App(params) {
    const projectRef = useRef(null);
@@ -46,26 +68,6 @@ function App(params) {
       });
     }
   }
-const tabData1 = [
-  { eventKey: 'home', title: 'Overview', content: <Project_Card projectlogo={coffee} style="200px"
-problems= "A coffee morning rush at the office cafe can hold employees waiting in line or not getting their morning coffee at all." 
-solutions="Making coffee ordering easier in the corporate world by creating a user friendly coffee ordering system that remembers your favorite coffee order but also allows you to change your order at anytime." 
-img_id="tools" img_src={logoproject2} 
- repo={"https://github.com/Becca1709/Coffee_app"}/> },
-  { eventKey: 'profile', title: 'Video', content: <Video_Card videosrc={coffeepreview}/> },
-  { eventKey: 'contact', title: 'READme', disabled: true, content: <Readmd /> },
-];
-
- 
-const tabData2=[ { eventKey: 'home', title: 'Overview', content: <Project_Card projectlogo={holidaylogo} style="280px"
-problems= " Due to increasing concerns about our digital safety, sharing our memories it's not a decision to make lightly
-                  anymore. Our memories can easily be lost in the endless storage of the cloud." 
-solutions=" Creating a digital album to keep our private memories organized without the risks of sharing them publicly.
-                  A modern solution for the digital nomad that values online safety while cherishing their best memories." 
-img_id="tools" img_src={Logos} repo={"https://github.com/Becca1709/holiday_review_v1.4"}/> },
-  { eventKey: 'profile', title: 'Video', content: <Video_Card videosrc={preview}/> },
-  { eventKey: 'ReadMe', title: 'ReadMe', content: <Readmd/> }
-]
   return (
     <>
       <BarNav Projectscroll={() => scrollDown(projectRef)} Contactscroll={() => scrollDown(contactRef)}/>
@@ -84,13 +86,12 @@ img_id="tools" img_src={Logos} repo={"https://github.com/Becca1709/holiday_revie
     </p>
         
         <h3>Some of the tools I am familiar with</h3>
-        <ul>
+        <ul className='intro-logos'>
           <li><img src={reactlogo} alt="react logo"/></li>
           <li><img src={bootstraplogo} alt="react_bootstrap_logo" id="boots"/></li>
            <li><img src={csslogo} alt="css logo"/></li>
             <li><img src={mysqllogo} alt="mysql_logo" id="mysql"/></li>
         </ul>
-    
         </div>
         
     </div>
@@ -111,21 +112,8 @@ img_id="tools" img_src={Logos} repo={"https://github.com/Becca1709/holiday_revie
         viewport={{ once: true }}
         transition={{ duration: 2.5 }}
       >
-        <h1 id="section-name">P R O J E C T S </h1>
-<Container>
-  <Row>
-    <Col>
-<div className='project-cont'>
-<Tabs_ tabs={tabData1}/>
-</div>
-</Col>
-<Col>
-<div className='project-cont'>
-<Tabs_ tabs={tabData2}/>
-</div>
-</Col>
-</Row>
-</Container>
+<Project_Section/>
+
 </motion.div>
     </div>
     <div className='Process'> 
@@ -140,31 +128,31 @@ img_id="tools" img_src={Logos} repo={"https://github.com/Becca1709/holiday_revie
   </div>
         
   <div className='steps-cont'>
-        <h3>Step by step</h3>
+        <h2>Development process</h2>
 <div class="process-card">
    <span class="step-number">01</span>
-      <h3>Plan & Architect</h3>
-      <p>Mapping user journeys, designing database schemas, and defining component hierarchies before writing code.</p>
+      <h4>Plan & Architect</h4>
+      <p>Understanding the main goal of the project, considering time constraints and financial resources, designing database schemas, and defining component hierarchies before writing code.</p>
     </div>
     <div class="process-card">
       <span class="step-number">02</span>
-      <h3>Build & Integrate</h3>
-      <p>Developing modular UI components and connecting front-end interfaces to back-end services with REST APIs.</p>
+      <h4>Build & Integrate</h4>
+      <p>Developing modular UI components and connecting front-end interfaces to back-end services with REST APIs. Reading documentation of new technical tools appropiate to the project that is being built. Using AI tools to expand my understanding of challenges in the process of devolpment.</p>
     </div>
     <div class="process-card">
       <span class="step-number">03</span>
-      <h3>Debug & Optimize</h3>
-      <p>Leveraging AI tools as a real-time partner for rapid troubleshooting, syntax validation, and performance tuning.</p>
+      <h4>Debug & Optimize</h4>
+      <p>Identifying root causes, isolating errors, and elevating code quality before deployment. 
+        When bugs or edge cases arise, I inspect browser developer tools, trace network requests, and leverage AI as a diagnostic partner to validate syntax and clarify underlying technical concepts.
+         Once resolved, I refine the solution—cleaning up leftover logs, refactoring component logic, and ensuring data flows predictably—so the codebase remains clean, readable, reliable, and maintainable.</p>
     </div>
     <div class="process-card">
       <span class="step-number">04</span>
-      <h3>Deploy & Reflect</h3>
-      <p>Shipping to cloud hosting platforms, conducting integration testing, and capturing key lessons for continuous growth.</p>
+      <h4>Deploy & Reflect</h4>
+      <p>When possibble, shipping to cloud hosting platforms, conducting integration testing, and capturing key lessons for continuous growth.</p>
     </div>
       </div>
     </div>
-
-  
     </div>
  <div className='contact' ref={contactRef}>
 <h1 id="section-name">C O N T A C T </h1>

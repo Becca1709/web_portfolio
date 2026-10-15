@@ -6,7 +6,7 @@ export function Video_Card(props){
         <>
  <div className="video">
              <h1> Watch preview </h1>
-          <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+          <div style={{ maxWidth: "640px", margin: "2em auto" }}>
             <video
               src={props.videosrc}
               width="90%"
